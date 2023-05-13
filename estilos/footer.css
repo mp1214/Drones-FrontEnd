@@ -18,39 +18,12 @@
 
 @media screen and (max-width: 767px){
 
-    .footer{
-        padding: 1.5rem 0;
-    }
-
     .contenido__footer{
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
     }
-
-    .contenido__footer_info{
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
 }
 
-/* ------------------------------------ */
-/* ----- Responsive para Tablets ------ */
-/* ------------------------------------ */
-@media (min-width:1024px){
-    .formulario__input-container input{
-        width: 700px;
-       }
-}
-@media (min-width:768px) and (max-width:1024px){
-    .contenido__footer_info{
-        flex-direction: column;
-    }
-    .contenido__footer_info{
-        width: 55%;
-    }
-}
+
