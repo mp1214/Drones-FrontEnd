@@ -1,0 +1,27 @@
+.contenido__footer{
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+    align-items: center;
+    color:  #12c2ca;
+}
+
+.contenido__footer img{
+    width: 150px;
+    
+}
+
+
+/* ------------------------------------ */
+/* ----- Responsive para Mobiles ------ */
+/* ------------------------------------ */
+
+@media screen and (max-width: 767px){
+
+    .contenido__footer{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}

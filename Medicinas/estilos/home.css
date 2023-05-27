@@ -1,0 +1,94 @@
+video {
+   
+    left: 0;
+    top: 0;
+    width: 100%;
+   
+    filter: brightness(30%);
+  
+  }
+  .logo_junior {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    transition: .2s ease;
+}
+.logo_junior .logo {
+    max-width: 100px;
+   margin-left:300px;
+}
+.logo{
+    width: auto;
+    margin-left:100px;
+}
+img {
+    width:100%;
+
+}
+
+button, input, optgroup, select, textarea {
+    padding: 0;
+    line-height: inherit;
+    color: inherit;
+}
+button {
+    background-color: transparent;
+    background-image: none;
+    padding: 0;
+}
+header .buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 100px;
+}
+header .buttons .btn-clean {
+    text-transform: uppercase;
+    margin: 0 11px;
+}
+
+header .btn-clean {
+    font-weight: 400;
+    text-transform: none;
+}
+header a.active, header a:hover {
+    color: #ffff;
+}
+.btn-clean {
+    display: flex;
+    align-items: center;
+    align-self: center;
+    color: #12c2ca;
+    text-decoration: none;
+    font-weight: 600;
+    transition: .2s ease;
+}
+* {
+    transition: .2s ease;
+    box-sizing: border-box;
+}
+header .buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 100px;
+}
+header h2 {
+    font-size: 92px;
+    font-weight: 700;
+    color: #12c2ca;
+    text-align: center;
+}
+header h3 {
+    font-size: 22px;
+    font-weight: 400;
+    margin-bottom: 50px;
+    text-align: center;
+    color: #085357;
+}
+header .buttons .btn-clean.btn-white {
+    border-radius: 45px;
+    color: #fff;
+    transition: border .2s ease-in;
+}
