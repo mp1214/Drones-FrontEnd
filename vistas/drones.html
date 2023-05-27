@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="stylesheet" href="../estilos/home.css">
     <link rel="stylesheet" href="../estilos/general.css">
+    <link rel="stylesheet" href="../estilos/footer.css">
     <link rel="stylesheet" href="../estilos/menu-hamburguesa.css">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <script src="https://kit.fontawesome.com/8a5a484aee.js" crossorigin="anonymous"></script>
@@ -35,50 +36,67 @@
                     <img class="logo" src="imagenes/drone-home2.png" alt="">
                 </a>
                 <ul>
-                    <li><a class="active" href="#">Inicio</a></li>
+                    <li><a  href="../index.html">Inicio</a></li>
                     <li><a href="#">Servicios</a></li>
-                    <li><a href="vistas/drones.php">Drones</a></li>
-                    <li><a href="#">Medicina</a></li>
-                    <li><a href="#">Contacto</a></li>
+                    <li><a class="active" href="../vistas/drones.html">Drones</a></li>
+                    <li><a href="../Medicinas/medicacion.html">Medicina</a></li>
+                    <li><a href="../contacto/formulario.html">Contacto</a></li>
                 </ul>
             </nav>
 
             <h2>Drones</h2>
-            <table class="table" style="color: white;">
+            <div id="app" class="pb-5">
+                <div v-if="carga">{{message}}</div>
+            <table class="table"  style="color: white;margin-bottom:0px;">
                 <thead>
-                    <tr>
+                    <tr >
                         <th scope="col">#</th>
                         <th scope="col">Nombre</th>
                         <th scope="col">Estado</th>
-                        <th scope="col">Accion</th>
+                        <th scope="col">Localización</th>
+                        <th scope="col">Imagen</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr loc="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14305.495841197791!2d-59.38964885916644!3d-26.314387711663777!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9443914d524a865f%3A0xb207c9c68100eaa6!2sHospital%20El%20Colorado!5e0!3m2!1sen!2sus!4v1683942233475!5m2!1sen!2sus">
-                        <th scope="row">1</th>
-                        <td>Blaupunk</td>
-                        <td>Activo</td>
+                    <tr v-for="dron in drones" loc="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14305.495841197791!2d-59.38964885916644!3d-26.314387711663777!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9443914d524a865f%3A0xb207c9c68100eaa6!2sHospital%20El%20Colorado!5e0!3m2!1sen!2sus!4v1683942233475!5m2!1sen!2sus">
+                        <th scope="row">{{dron.serial_number}}</th>
+                        <td>{{dron.model}}</td>
+                        <td>{{dron.state}}</td>
+                       
                         <td><button type="button" class="ver btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="initMap()"> Ver</button></td>
+                      <td><button  type="button" class="ver btn btn-primary" data-bs-toggle="modal" data-bs-target="#imagenDron" v-on:click="ver=true"> Ver</button></td>
+                      
+                     
                     </tr>
-                    <tr loc="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11977.601414566256!2d-55.03682205387866!3d-26.80933201751225!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94f827183e29bd07%3A0xa30f0ee301424b7d!2sPatio%20Del%20Puerto%20Hotel%20Boutique!5e0!3m2!1sen!2sus!4v1683942598177!5m2!1sen!2sus">
-                        <th scope="row">2</th>
-                        <td>Mini 3</td>
-                        <td>Activo</td>
-                        <td><button type="button" class="ver btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Ver</button></td>
-                    </tr>
-                    <tr>
-                        <th scope="row">3</th>
-                        <td>Phantom</td>
-                        <td>Inactivo</td>
-                        <td><button disabled type="button" class="ver btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"> Ver</button></td>
-                    </tr>
+                   
                 </tbody>
             </table>
+            <br><br>
+           <div v-if="ver">
+            <div class="modal-body">
+                <div class="container" style="text-align:center;">
+                  <img :src=imagenDron style="width:400px;">
+                </div>
+            </div>
+           </div>
         </div>
+    </div>
     </header>
-    <script src="./script.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+   
+    
+   
+<footer class="footer">
+    <div class="contenido__footer">
+       
+            <img src="../imagenes/drone-home2.png">
+           <p>Copyright 2023©</p>
+    </div>
+    
+</footer>
 </body>
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+<script src="./script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
 
 </html>
 
@@ -101,3 +119,4 @@
         </div>
     </div>
 </div>
+
