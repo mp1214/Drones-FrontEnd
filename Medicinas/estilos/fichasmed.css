@@ -1,0 +1,42 @@
+* {
+    box-sizing: border-box;
+
+}
+.contenedor{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center;
+    background-color:#085357;
+    
+
+}
+
+.medicamento {
+    background-color:#085357;
+    padding: 16px;
+    
+}
+
+.tipomed {
+    font-size: 13px;
+    color:aqua;
+    margin-block-end: 20px;
+    padding-left: 3%;
+    padding-bottom: 5%;
+}
+
+/*.medicamento a {
+    color: #fff;
+    text-decoration: none;
+    width: 10px;
+    border: solid #085357;
+    border-radius: 3px;
+
+}*/
+.btn{
+    color: #fff;
+    text-decoration: none;
+    width: 10px;
+    border: solid #085357;
+    border-radius: 3px;
+}
