@@ -14,7 +14,7 @@ const { createApp } = Vue
       return {
         drones:[],
         showModal: false,
-        imagenDron:"https://firebasestorage.googleapis.com/v0/b/white-con-amor.appspot.com/o/drones%2Fdron2.jpg?alt=media&token=e4f37081-fc44-40ef-a589-829b48c0be1e",
+        imagenDron:"https://firebasestorage.googleapis.com/v0/b/white-con-amor.appspot.com/o/drones%2Fdrone-3198324_1280.jpg?alt=media&token=acdbf9b7-98a3-4421-ba7d-8ee0bb82d948",
         carga:true,
         ver:false,
         message:"Espere un momento a que se carguen los datos",

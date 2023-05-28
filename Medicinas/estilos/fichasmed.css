@@ -16,6 +16,10 @@
     padding: 16px;
     
 }
+.medicamento img{
+    box-shadow: 0 0 6px 0 rgba(17, 17, 17, 0.8)
+}
+
 
 .tipomed {
     font-size: 13px;
@@ -23,6 +27,7 @@
     margin-block-end: 20px;
     padding-left: 3%;
     padding-bottom: 5%;
+    box-shadow: 0 0 6px 0 rgba(255, 255, 255, 0.8)
 }
 
 /*.medicamento a {
